@@ -1,0 +1,112 @@
+.tableAndEditForm {
+  display: flex;
+}
+
+.hidden {
+  display: none !important; /*приходиться использовать тут important, так как по значению специфичности он не перекрывает свойство display из about*/
+}
+
+.collum {
+  margin-bottom: 10px;
+}
+
+button {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em calc(.5em + 3px);
+  border-radius: 3px;
+  background: rgb(68, 109, 184);
+  box-shadow: 0 -3px white inset;
+  transition: 0.2s;
+  outline: none;
+}
+
+button:hover { 
+  background: rgb(53, 167, 110); 
+}
+
+.buttonIsPushed {
+  background: white !important; /*приходиться использовать тут important из-за специфичности*/
+  box-shadow: 0 3px rgb(68, 109, 184) inset !important;  /*приходиться использовать тут important из-за специфичности*/
+  color: rgb(68, 109, 184) !important;  /*приходиться использовать тут important из-за специфичности*/
+}
+
+table {
+  border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+  border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+  width: 100%;
+}
+
+.tableAndPage {
+  width: 50%;
+}
+
+tr, th, td {
+  border: 2px solid grey; /*Границы ячеек заголовка каждого столбца*/
+}
+
+th {
+  cursor: pointer;
+  background: rgb(155, 172, 187);
+}
+
+th, td {
+  min-width: 100px;
+}
+
+tbody tr:nth-child(2n) {
+  background: #E5E5E5;
+}
+
+.about {
+  margin: 0; /* Убираем внешний отступ */
+  border: none;
+  padding: 0;
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+#tableFoot {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#tableFoot button {
+  margin-right: 5px;
+}
+
+#tableFoot button:last-child {
+  margin-right: 0px;
+}
+
+#edit {
+  border: 2px solid grey;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #E5E5E5;
+}
+
+#edit div {
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#buttonSave {
+  position: relative;
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+#buttonSave:disabled {
+  background: gray;
+  box-shadow: 0 -3px black inset;
+  color: black;
+}
+
+

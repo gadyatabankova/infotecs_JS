@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="collum">Скрыть/ показать столбцы
+      <button onclick="toggleHidden(0)">firstName</button>
+      <button onclick="toggleHidden(1)">lastName</button>
+      <button onclick="toggleHidden(2)">about</button>
+      <button onclick="toggleHidden(3)">eyeColor</button>
+    </div>
+    <div class="tableAndEditForm">
+      <div class="tableAndPage">
+        <table>
+          <thead id='tableHead'>
+            <tr>
+              <th onclick="sortTable(0)" title="Click for sorting">
+                <span>Имя (firstName)</span>
+                <span class="arrow"></span>
+              </th>
+              <th onclick="sortTable(1)" title="Click for sorting">
+                <span>Фамилия (lastName)</span>
+                <span class="arrow"></span>
+              </th>
+              <th>
+                <span onclick="sortTable(2)" title="Click for sorting">Описание (about)</span>
+                <span class="arrow"></span>
+                <input type="text" id="searchAbout" placeholder="Search ...">
+              </th>
+              <th onclick="sortTable(3)" title="Click for sorting">
+                <span>Цвет глаз (eyeColor)</span>
+                <span class="arrow"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id='tableBody'></tbody>
+        </table>
+        <div id='tableFoot'></div>
+      </div>
+      <div id="edit" class="hidden">
+        <button id="buttonEdit">Редактировать</button>
+        <div>Имя</div>
+        <textarea name="firstName" rows="1" cols="45"></textarea>
+        <div>Фамилия</div>
+        <textarea name="lastName" rows="1" cols="45"></textarea>
+        <div>Описание</div>
+        <textarea name="about" rows="9" cols="45"></textarea>
+        <div>Цвет глаз</div>
+        <textarea name="eyeColor" rows="1" cols="45"></textarea>
+        <div><button id="buttonSave" disabled="disabled">Сохранить</button></div>
+      </div>
+    </div>
+  </body>
+</html>
